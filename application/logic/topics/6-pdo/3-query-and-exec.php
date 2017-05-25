@@ -3,7 +3,7 @@
 	/**
 	 * There are 2 methods to execute statements in the database:
 	 *
-	 * - query()  For select queries and fetching rows
+	 * - query()  For select statements and fetching rows
 	 * - exec()   For insert, update or delete statements
 	 */
 	

@@ -8,7 +8,7 @@
 	 * value is evaluated to false.
 	 */
 	
-	# Let's say we want to assign a specific GET parameter, but
+	# Let's say we' like to assign a specific GET parameter, but
 	# only if it's set (so its values isn't null), otherwise
 	# let's assign some text.
 	

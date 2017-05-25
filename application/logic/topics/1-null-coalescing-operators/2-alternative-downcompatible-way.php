@@ -20,7 +20,7 @@
 	echo "<br>";
 	
 	# The ?? operator, on the other hand, determines only if the value or expression
-	# evaluates to null:
+	# is null:
 	var_dump($val ?? "val is null");
 	echo "<br>";
 	var_dump($unknown ?? "unknown is null");

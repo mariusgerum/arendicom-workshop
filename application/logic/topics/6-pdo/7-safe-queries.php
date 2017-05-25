@@ -15,9 +15,12 @@
 	# That's it - your database is safe now.
 	
 	# Now let's print this in a safe way
-	$Data = $db->query("SELECT * FROM `test` WHERE `id` = " . $db->quote($db->lastInsertId()))->fetch();
+	$Data = $db->query("SELECT * FROM `test` WHERE `id` = '" . $db->lastInsertId() . "'")->fetch();
 	echo htmlspecialchars($Data['test'], ENT_QUOTES, 'utf-8');
 	
-	# This is all you have to do to prevent XS and sql injection. There's nothing more.
+	# This is all you have to do to prevent XS and sql injection.
+	
+	# Do not use htmlspecialchars before an INSERT or UPDATE - this doesn't
+	# make any sense since HTML isn't dangerous for a database in any way.
 
 ?>

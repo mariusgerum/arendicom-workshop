@@ -1,5 +1,10 @@
 <?php
 	
+	/**
+	 * This is just for fetching our test table records.
+	 * Note: this is not part of my presentation.
+	 */
+	
 	$Data = $db->query("SELECT * FROM `test`")->fetchAll();
 	
 	if ($Data) {

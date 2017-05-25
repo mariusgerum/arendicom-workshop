@@ -11,7 +11,7 @@
 	 * The current fetchMode (array, object, much more...) can be set either by
 	 * using setFetchMode() for the current statement, with this awesome
 	 * setAttribute() method that applies to all actions or as previously shown
-	 * passed to the PDO constructor as $options argument.
+	 * passed directly to the PDO constructor as $options argument.
 	 *
 	 * More:
 	 * setAttribute()     http://php.net/manual/de/pdo.setattribute.php

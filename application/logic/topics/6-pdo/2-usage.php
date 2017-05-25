@@ -2,12 +2,13 @@
 	
 	/**
 	 * Connections can be established by creating an instance of the
-	 * PDO base class. Therefore, an DSN (data source name) has to be
+	 * PDO base class. Therefore, a DSN (data source name) has to be
 	 * passed to the constructor as well as the database user and
 	 * password. The 4th argument with options turns out to be a
 	 * pretty useful thing to do.
 	 *
-	 * Note: You'll find this in index.php
+	 * Note: You'll find this in index.php with $db PDO instance for
+	 * all following examples
 	 */
 	
 	# Data source name

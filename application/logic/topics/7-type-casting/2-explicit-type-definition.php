@@ -26,7 +26,8 @@
 	$var = (int)123;
 	
 	# ... although it may seems like kind of unnecessary to use
-	# this on declarations.
+	# this on declarations, but often it comes that a value is
+	# unknown or dynamically assigned.
 	# But, however, what happens here is actually declaring,
 	# initialising AND converting the value of a variable before
 	# the actual assignment.

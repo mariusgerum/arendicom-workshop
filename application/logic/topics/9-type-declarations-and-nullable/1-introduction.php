@@ -26,13 +26,7 @@
 	 * or method.
 	 *
 	 * ==== Could / should we enable strict types for E-SHOP-DIRECT?
-	 * Don't you dare even thinking about something like that!
-	 * Enabling strict_types in ESHOPDIRECT would immediately open the
-	 * gate to a new dimension of demonic hell - only "thanks" to PHPs
-	 * sloppy use of type declarations and implicit-casting this
-	 * whole bunch of mess can be handled.
-	 * That's no ones but PHPs fault, just saying ;)
-	 * But it'd be a desirable achievement, so let's keep this in mind.
+	 * It'd be a truly desirable achievement, so let's keep this in mind.
 	 *
 	 * ==== IMPORTANT THINGS
 	 * - Typehints and -declarations can only be successful applied when
