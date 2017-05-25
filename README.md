@@ -1,2 +1,2 @@
 # Arendicom PHP workshop
-### Feel fre to fork, clone or downloqad this project.
+### Feel free to fork, clone or download this project.
