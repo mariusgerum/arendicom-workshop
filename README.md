@@ -1,1 +1,0 @@
-# Arendicom PHP workshop
