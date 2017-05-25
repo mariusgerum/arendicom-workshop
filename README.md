@@ -1,1 +1,1 @@
-# arendicom-workshop
+# Arendicom PHP workshop

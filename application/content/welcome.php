@@ -1,47 +1,48 @@
+<div class="container-fluid">
 
-
-	<!-- Example row of columns -->
 	<div class="row">
-		<div class="col-md-4">
-			<h3>Null coalescing operator</h3>
-			<p>Nice shorthand ternary operator combined with isset.</p>
-			<p><a class="btn btn-default" href="#" role="button">Open &raquo;</a></p>
+		<div class="col-md-12">
+			<h1>The following topics are covered:</h1>
 		</div>
-
-		<div class="col-md-4">
-			<h3>Spaceship operator</h3>
-			<p>Expression comparison with 3 possible return values.</p>
-			<p><a class="btn btn-default" href="#" role="button">Ahoy &raquo;</a></p>
-		</div>
-
-		<div class="col-md-4">
-			<h3>Negative string offset</h3>
-			<p>xxx</p>
-			<p><a class="btn btn-default" href="#" role="button">Open &raquo;</a></p>
-		</div>
-
-		<div class="col-md-4">
-			<h3>Typehints</h3>
-			<p>xxx</p>
-			<p><a class="btn btn-default" href="#" role="button">Open &raquo;</a></p>
-		</div>
-
-		<div class="col-md-4">
-			<h3>Nullable types and parameters</h3>
-			<p>xxx</p>
-			<p><a class="btn btn-default" href="#" role="button">Open &raquo;</a></p>
-		</div>
-
-		<div class="col-md-4">
-			<h3>Anonymous classes</h3>
-			<p>Some stupid fuck, but at least you should know that exists</p>
-			<p><a class="btn btn-default" href="#" role="button">Open &raquo;</a></p>
-		</div>
-
-		<div class="col-md-4">
-			<h3>Traits</h3>
-			<p></p>
-			<p><a class="btn btn-default" href="#" role="button">Open &raquo;</a></p>
-		</div>
-		
 	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<?php
+				
+				$path = './application/logic/topics/';
+				if (file_exists($path)) {
+					$Files = [];
+					$handle = opendir($path);
+					while (($file = readdir($handle)) !== false) {
+						if (Regex::match('/^\.\.?$/i', $file)) {
+							continue;
+						}
+						if (is_dir($path . $file)) {
+							$Files[] = $file;
+						}
+					}
+					
+					asort($Files);
+					
+					$i = 1;
+					echo "<div class='row'>";
+					foreach ($Files as $file) {
+						$name = $file;
+						$name = preg_replace('/^[0-9]+?\-/i', '', $name);
+						$name = str_replace('-', ' ', $name);
+						$name = ucfirst($name);
+						echo "<div class='col-md-4'>";
+						echo "<h4>" . $i . ". " . $name . "</h4>";
+						echo "</div>";
+						$i++;
+					}
+					echo "</div>";
+					
+				}
+			
+			?>
+		</div>
+	</div>
+
+</div>

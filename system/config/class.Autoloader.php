@@ -17,38 +17,45 @@
 		}
 		
 		/**
-		 *
+		 * Register autoloader using SPL
 		 */
 		public function register() {
-			spl_autoload_register([ $this, 'load' ]);
+			spl_autoload_register([$this, 'load']);
 		}
 		
 		/**
 		 * @param $name
 		 */
 		public function load($name) {
-			if ( $this->namespace !== null ) {
+			if ($this->namespace !== null) {
 				$name = str_replace($this->namespace . '\\', '', $name);
 			}
 			
-			$name = str_replace('\\', DIRECTORY_SEPARATOR, $name);
+			$name = preg_replace('/.*?\\\/i', '', $name);
 			
-			$path = '.';
+			# Some naming conventions
+			$NameConventions = [
+				'class.{name}.php',
+				'{name}.class.php',
+			];
 			
-			$Types = [
-				'class',
-				'interface',
-				'abstract'
+			# Folders to search for classes
+			$Folders = [
+				'./system/lib/',
+				'./system/database/',
 			];
 			
 			$Files = [];
 			
-			foreach($Types as $Type){
-				$Files[] = $path . '/system/lib/' . $Type . '.' . $name . '.php';
+			foreach ($Folders as $Folder) {
+				foreach ($NameConventions as $NC) {
+					$filename = str_replace('{name}', $name, $NC);
+					$Files[] = $Folder . $filename;
+				}
 			}
 			
-			foreach ( $Files as $file ) {
-				if ( file_exists($file) ) {
+			foreach ($Files as $file) {
+				if (file_exists($file)) {
 					require_once $file;
 				}
 			}

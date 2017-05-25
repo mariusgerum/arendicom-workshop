@@ -1,5 +1,9 @@
 <?php
 	
+	/**
+	 * Class Request
+	 * Request handler
+	 */
 	class Request {
 		
 		private static $page = null;
@@ -42,7 +46,7 @@
 		 *
 		 * @return mixed|null|string
 		 */
-		public static function getPage($key = 0){
+		public static function getPage($key = 0) {
 			return self::$pages[$key] ?? self::page();
 		}
 		

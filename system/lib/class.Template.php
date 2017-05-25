@@ -9,11 +9,9 @@
 		protected $html = "";
 		
 		/**
-		 * Loads page template
+		 * Template constructor.
 		 *
 		 * @param null $tpl
-		 *
-		 * @return string
 		 */
 		public function __construct($tpl = null) {
 			$tpl = $tpl ?? DEFAULT_TEMPLATE;
@@ -62,6 +60,7 @@
 				
 				return $html;
 			}
+			
 			return "";
 		}
 		

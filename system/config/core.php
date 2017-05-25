@@ -9,6 +9,7 @@
 	
 	# Require autoloader
 	require_once DIR . '/system/config/class.Autoloader.php';
+	
 	# Autoloading magic
 	$Autoloader = new Autoloader();
 	$Autoloader->register();
@@ -16,7 +17,7 @@
 	# Debug mode prints error messages and stuff
 	define('DEBUG', true);
 	
-	if ( DEBUG ) {
+	if (DEBUG) {
 		@ini_set('display_errors', 1);
 		@error_reporting(E_ALL);
 	}
@@ -24,7 +25,7 @@
 	# Maintenance mode
 	define('MAINTENANCE', false);
 	
-	if(MAINTENANCE){
+	if (MAINTENANCE || file_exists('./.maintenance')) {
 		exit("Maintenance ... please try again later.");
 	}
 	
@@ -50,5 +51,5 @@
 	
 	# Load request handler
 	Request::init();
-	
+
 ?>

@@ -32,11 +32,11 @@ $(document).on('click', '.ajax', function (e) {
         DataURL = "&" + DataURL;
     }
 
-    if($(this).hasClass('trigger-alt')){
+    if ($(this).hasClass('trigger-alt')) {
         CustomTriggerClass = '.alt-trigger';
     }
 
-    $.ajax({
+    jQuery.ajax({
         url: "/index.php?ajax&action=" + $(ClickedElement).attr('data-action') + DataURL,
         type: "GET",
         processData: false,
@@ -51,7 +51,7 @@ $(document).on('click', '.ajax', function (e) {
             // Sets focus to element with autofocus attribute
             $($(ClickedElement).attr('data-rc') + ' *[autofocus]').trigger('focus');
 
-            window.setTimeout(function(){
+            window.setTimeout(function () {
                 jQuery('.fixed-alert').hide();
             }, 4000);
 
@@ -107,7 +107,7 @@ $(document).on('click', '.ajax-submit', function (e) {
         $(ClickedElement).find('i.fa').attr('class', 'fa fa-refresh fa-spin');
     }
 
-    if($(this).hasClass('trigger-alt')){
+    if ($(this).hasClass('trigger-alt')) {
         CustomTriggerClass = '.alt-trigger';
     }
 
@@ -125,7 +125,7 @@ $(document).on('click', '.ajax-submit', function (e) {
         // Sets focus to element with autofocus attribute
         $($(ClickedElement).attr('data-rc') + ' *[autofocus]').trigger('focus');
 
-        window.setTimeout(function(){
+        window.setTimeout(function () {
             jQuery('.fixed-alert').hide();
         }, 2500);
 
@@ -253,7 +253,7 @@ var CustomTriggerClass = false;
 
 $('.modal').on('hidden.bs.modal', function () {
     var tc = '.trigger-on-modal-close';
-    if(CustomTriggerClass !== false){
+    if (CustomTriggerClass !== false) {
         tc = CustomTriggerClass;
         CustomTriggerClass = false;
     }

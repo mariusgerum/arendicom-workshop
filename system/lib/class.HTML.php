@@ -10,15 +10,16 @@
 		 *
 		 * @return string
 		 */
-		public static function success($title, $value = ""){
+		public static function success($title, $value = "") {
 			$text = "";
-			if($value == ''){
+			if ($value == '') {
 				$text = $title;
-			}else{
+			} else {
 				$text = "<strong>" . $title . "</strong><br>" . $value;
 			}
 			$f = self::$fixed;
 			self::$fixed = "";
+			
 			return "<div class='alert alert-success" . $f . "'><i class='fa fa-check'></i> {$text}</div>";
 		}
 		
@@ -29,15 +30,16 @@
 		 *
 		 * @return string
 		 */
-		public static function info($title, $value = "", $type = 'alert'){
+		public static function info($title, $value = "", $type = 'alert') {
 			$text = "";
-			if($value == ''){
+			if ($value == '') {
 				$text = $title;
-			}else{
+			} else {
 				$text = "<strong>" . $title . "</strong><br>" . $value;
 			}
 			$f = self::$fixed;
 			self::$fixed = "";
+			
 			return "<div class='" . $type . " " . $type . "-info" . $f . "'><i class='fa fa-info-circle'></i> {$text}</div>";
 		}
 		
@@ -47,15 +49,16 @@
 		 *
 		 * @return string
 		 */
-		public static function danger($title, $value = ""){
+		public static function danger($title, $value = "") {
 			$text = "";
-			if($value == ''){
+			if ($value == '') {
 				$text = $title;
-			}else{
+			} else {
 				$text = "<strong>" . $title . "</strong><br>" . $value;
 			}
 			$f = self::$fixed;
 			self::$fixed = "";
+			
 			return "<div class='alert alert-danger" . $f . "'><i class='fa fa-exclamation-circle'></i> {$text}</div>";
 		}
 		
@@ -65,27 +68,17 @@
 		 *
 		 * @return string
 		 */
-		public static function warning($title, $value = ""){
+		public static function warning($title, $value = "") {
 			$text = "";
-			if($value == ''){
+			if ($value == '') {
 				$text = $title;
-			}else{
+			} else {
 				$text = "<strong>" . $title . "</strong><br>" . $value;
 			}
 			$f = self::$fixed;
 			self::$fixed = "";
-			return "<div class='alert alert-warning" . $f . "'><i class='fa fa-warning'></i> {$text}</div>";
-		}
-		
-		public static function getWindowTitle(){
 			
-		}
-		
-		/**
-		 *
-		 */
-		public static function setFixed(){
-			self::$fixed = ' fixed-alert';
+			return "<div class='alert alert-warning" . $f . "'><i class='fa fa-warning'></i> {$text}</div>";
 		}
 		
 	}
