@@ -46,12 +46,7 @@
 				<h1>PHP Workshop!</h1>
 				<p>
 					These topics are all about the awesome features PHP provides with the new version 7 and 7.1
-					as well as some good practice coding discussions.<br>
-					<br>
-					PHP version <?php echo phpversion(); ?> is used for all examples.
-				</p>
-				<p>
-					<a class="btn btn-primary btn-lg" href="/topics" role="button">Let's go &raquo;</a>
+					as well as some good practice coding discussions. PHP <strong>version <?php echo phpversion(); ?></strong> is used for all examples.
 				</p>
 			</div>
 		</div>
