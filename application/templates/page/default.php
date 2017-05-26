@@ -1,4 +1,3 @@
-
 <?php
 	$container_class = isset($_SESSION['fw']) ? 'container-fluid' : 'container';
 ?>
