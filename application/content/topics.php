@@ -26,10 +26,15 @@
 						}
 						
 						echo "<div class='single-topic'>";
+						echo "<a href='javascript:;' class='ajax' data-action='info.playground' data-url='topic=info' data-rc='.rc-topic-content'><i class='fa fa-code'></i> Playground</a>";
+						echo "</div>";
+						
+						echo "<div class='single-topic'>";
 						echo "<a href='javascript:;' class='ajax' data-action='info.menu' data-url='topic=info' data-rc='.rc-info'><i class='fa fa-info-circle'></i> Info</a>";
 						echo "<div class='topic-examples rc-info'>";
 						echo "</div>";
 						echo "</div>";
+						
 					}
 				}
 			
