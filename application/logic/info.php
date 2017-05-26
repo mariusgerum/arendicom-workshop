@@ -52,6 +52,9 @@
 			
 			echo "<div class='row form-group'>";
 			echo "<div class='col-md-6'>";
+			
+			# Note: this triggers the "Refrsh and execute" hyperlink after
+			# saving the changes to the playground.php file via ajax.
 			echo "<a href='javascript:;' class='btn btn-success ajax-submit' data-action='info.save_code' data-rc='.rc-save-code' data-tc='.trigger-playground-execution' data-form='#frmCodeEditor'><i class='fa fa-save'></i> Save</a>";
 			echo "</div>";
 			echo "<div class='col-md-6 rc-save-code'>";
@@ -66,7 +69,7 @@
 			echo "<fieldset><legend>Code output <small>(<a href='javascript:;' class='ajax trigger-playground-execution' data-action='info.exec_playground' data-rc='.playground-output'><i class='fa fa-refresh'></i> Refresh and execute</a>)</small></legend>";
 			echo "<div class='row form-group'>";
 			echo "<div class='col-md-12 playground-output'>";
-			
+			exec_playground();
 			echo "</div>";
 			echo "</div>";
 			echo "</fieldset>";
