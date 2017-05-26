@@ -21,5 +21,16 @@
 	function server_info() {
 		echo pre($_SERVER);
 	}
+	
+	/**
+	 *
+	 */
+	function setfw() {
+		if (!isset($_SESSION['fw'])) {
+			$_SESSION['fw'] = true;
+		} else {
+			unset($_SESSION['fw']);
+		}
+	}
 
 ?>
