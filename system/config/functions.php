@@ -1,7 +1,7 @@
 <?php
 	
 	/**
-	 * Secure HTML output to prevent XS
+	 * Secure HTML output to prevent XSS
 	 *
 	 * @param $value
 	 *
